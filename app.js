@@ -18,13 +18,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// It redirect to the  indexRouter inside routes
 app.use('/', indexRouter);
-
-
-// other routes
-// app.use('*', function(req,res){
-// });
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
